@@ -111,6 +111,7 @@ end
 
 to slow-down-car
   set speed (speed - deceleration)
+  if speed < 0 [ set speed decelaration ]
   set patience patience - 1
 end
 
@@ -157,6 +158,21 @@ GRAPHICS-WINDOW
 1
 ticks
 20.0
+
+SLIDER
+0
+0
+0
+0
+NIL
+NIL
+0
+100
+50.0
+1
+1
+NIL
+HORIZONTAL
 
 SLIDER
 24
@@ -236,21 +252,6 @@ NIL
 NIL
 NIL
 0
-
-SLIDER
-24
-202
-196
-235
-max-patience
-max-patience
-0
-100
-50.0
-1
-1
-NIL
-HORIZONTAL
 
 @#$#@#$#@
 ## WHAT IS IT?
