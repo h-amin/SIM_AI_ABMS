@@ -92,7 +92,7 @@ to move-to-lane
     forward 0.2
     set ycor precision ycor 1]
     [
-    ; slow down if the car blocking us is behind, otherwise speed up
+    ; snelheid minder als de auto ons blocked anders versnellen
     ifelse towards blocking-car <= 180 [ slow-down-car ] [speed-up-car]
   ]
 
